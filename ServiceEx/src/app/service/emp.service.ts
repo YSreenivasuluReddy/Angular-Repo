@@ -1,0 +1,35 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EmpService {
+
+  constructor() { }
+  empData = [{
+    id: 1,
+    name: 'John Doe',
+    email: 'john.doe@example.com'
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com'
+  },
+  {
+    id: 3,
+    name: 'Michael Johnson',
+    email: 'michael.johnson@example.com'
+  },
+  {
+    id: 4,
+    name: 'Emily Davis',
+    email: 'emily.davis@example.com'
+  },
+  {
+    id: 5,
+    name: 'David Wilson',
+    email: 'david.wilson@example.com'
+  }
+]
+}
