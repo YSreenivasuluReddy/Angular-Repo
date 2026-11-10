@@ -30,6 +30,11 @@ export class EmpService {
     id: 5,
     name: 'David Wilson',
     email: 'david.wilson@example.com'
+  },
+  {
+    id: 6,
+    name: 'Sarah Thompson',
+    email: 'sarah.thompson@example.com'
   }
 ]
 }
