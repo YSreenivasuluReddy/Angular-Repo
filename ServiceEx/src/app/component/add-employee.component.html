@@ -1,0 +1,60 @@
+
+<h2>Add Employee</h2>
+
+<form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+
+  <div>
+    <label>Employee Name:</label>
+
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="Enter employee name"
+    />
+
+    @if (
+      employeeForm.controls.name.touched &&
+      employeeForm.controls.name.hasError('required')
+    ) {
+      <p style="color: red;">Name is required.</p>
+    }
+  </div>
+
+  <br />
+
+  <div>
+    <label>Employee Email:</label>
+
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Enter employee email"
+    />
+
+    @if (
+      employeeForm.controls.email.touched &&
+      employeeForm.controls.email.hasError('required')
+    ) {
+      <p style="color: red;">Email is required.</p>
+    }
+
+    @if (
+      employeeForm.controls.email.touched &&
+      employeeForm.controls.email.hasError('email')
+    ) {
+      <p style="color: red;">Enter a valid email.</p>
+    }
+
+    @if (
+      employeeForm.controls.email.touched &&
+      employeeForm.controls.email.hasError('pattern')
+    ) {
+      <p style="color: red;">Email format is invalid.</p>
+    }
+  </div>
+
+  <br />
+
+  <button type="submit">Add Employee</button>
+
+</form>
